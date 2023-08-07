@@ -197,7 +197,7 @@ fetch('communities.json').then((response) => {
 }).then((c) => {
   communities = c;
   communities = communities.filter((c) => {
-    return checkedCommunities.indexOf(c.community.instance_id + '@' + c.community.id) === -1;
+    return c.counts.posts > 10 && checkedCommunities.indexOf(c.community.instance_id + '@' + c.community.id) === -1;
   });
   document.querySelector<HTMLButtonElement>('#subscribe-btn')!.onclick = () => {
     clearError();
