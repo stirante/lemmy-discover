@@ -16,6 +16,7 @@
     "safe-marked": "^15.0.0"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.2",
     "sass": "^1.64.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
