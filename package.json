@@ -1,0 +1,23 @@
+{
+  "name": "lemmy-discover",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "bulma-prefers-dark": "^0.1.0-beta.1",
+    "fontawesome-free": "^1.0.4",
+    "lemmy-js-client": "^0.19.0-rc.1",
+    "safe-marked": "^15.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.64.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-prefers-dark/bulma-prefers-dark.sass";
+
+.loader {
+  height: 80px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  z-index: 1;
+}
+
+.post-img {
+  cursor: pointer;
+}
+
+.contained-img {
+  height: 100% !important;
+  width: 100%;
+  object-fit: contain;
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.87) !important;
+}
+
+.modal-card-body {
+  background-color: hsl(0, 0%, 10%) !important;
+}
