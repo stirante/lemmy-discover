@@ -334,6 +334,7 @@ document.querySelector<HTMLButtonElement>('#modal-cancel-btn')!.onclick = () => 
   document.querySelector<HTMLInputElement>('#instance-txt')!.value = '';
   document.querySelector<HTMLInputElement>('#username-txt')!.value = '';
   document.querySelector<HTMLInputElement>('#password-txt')!.value = '';
+  document.querySelector<HTMLInputElement>('#totp-txt')!.value = '';
   document.querySelector<HTMLDivElement>('#login-modal')!.classList.remove('is-active');
 }
 // Setup login button in login modal
@@ -342,10 +343,12 @@ document.querySelector<HTMLButtonElement>('#modal-login-btn')!.onclick = () => {
   const instance = document.querySelector<HTMLInputElement>('#instance-txt')!.value;
   const username = document.querySelector<HTMLInputElement>('#username-txt')!.value;
   const password = document.querySelector<HTMLInputElement>('#password-txt')!.value;
+  const totp = document.querySelector<HTMLInputElement>('#totp-txt')!.value;
   const lemmy = new LemmyHttp('https://' + instance);
   lemmy.login({
     username_or_email: username,
     password: password,
+    totp_2fa_token: totp.length > 0 ? totp : undefined,
   }).then((token) => {
     if (!token.jwt) {
       document.querySelector<HTMLDivElement>('#failed-login-info')!.style.display = 'block';
